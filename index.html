@@ -9,7 +9,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-4H6LHM0ZWV');
 </script>
 <title>Nikhar Jain — Java Backend Developer</title>
@@ -471,9 +470,9 @@ footer{padding:2rem 4rem;border-top:1px solid var(--border);display:flex;justify
       <h2 class="section-title">Get in Touch</h2>
       <p class="contact-desc">Open to new opportunities, interesting backend projects,<br>or just a conversation about Java and distributed systems.</p>
       <div class="contact-links">
-        <a href="/cdn-cgi/l/email-protection#dfb1b6b4b7beadb5beb6b1ede89fb8b2beb6b3f1bcb0b2" class="clink clink-email">
+        <a href="mailto:nikharjain27@gmail.com" class="clink clink-email">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <span class="__cf_email__" data-cfemail="016f686a6960736b60686f333641666c60686d2f626e6c">[email&#160;protected]</span>
+          nikharjain27@gmail.com
         </a>
         <a href="https://linkedin.com/in/nikharjain" target="_blank" class="clink clink-li">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
@@ -486,7 +485,7 @@ footer{padding:2rem 4rem;border-top:1px solid var(--border);display:flex;justify
       </div>
       <div class="cta-band">
         <p>Looking for a reliable Java Backend Developer? Let's talk about your project.</p>
-        <a href="/cdn-cgi/l/email-protection#e886818380899a82898186dadfa88f85898184c68b8785">
+        <a href="mailto:nikharjain27@gmail.com">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           Send me an email
         </a>
@@ -503,37 +502,85 @@ footer{padding:2rem 4rem;border-top:1px solid var(--border);display:flex;justify
   <div class="footer-right"><span>📍</span>Mumbai, Maharashtra, India</div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 const nav = document.getElementById('nav');
-window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40),{passive:true});
+window.addEventListener('scroll', function(){ nav.classList.toggle('scrolled', window.scrollY > 40); }, { passive: true });
 
-const hbg=document.getElementById('hbg'),mNav=document.getElementById('mNav');
-hbg.addEventListener('click',()=>{
+const hbg = document.getElementById('hbg');
+const mNav = document.getElementById('mNav');
+hbg.addEventListener('click', function(){
   hbg.classList.toggle('open');
   mNav.classList.toggle('open');
-  document.body.style.overflow=mNav.classList.contains('open')?'hidden':'';
+  document.body.style.overflow = mNav.classList.contains('open') ? 'hidden' : '';
 });
-function closeMob(){hbg.classList.remove('open');mNav.classList.remove('open');document.body.style.overflow='';}
-
-const canvas=document.getElementById('particles'),ctx=canvas.getContext('2d');
-let W,H,pts=[];
-function resize(){W=canvas.width=innerWidth;H=canvas.height=innerHeight}
-resize();
-window.addEventListener('resize',resize,{passive:true});
-
-class Pt{
-  constructor(){this.reset()}
-  reset(){this.x=Math.random()*W;this.y=Math.random()*H;this.r=Math.random()*1.4+.3;this.vx=(Math.random()-.5)*.22;this.vy=(Math.random()-.5)*.22;this.a=Math.random()*.35+.08;this.c=Math.random()>.5?'59,130,246':'139,92,246'}
-  tick(){this.x+=this.vx;this.y+=this.vy;if(this.x<0||this.x>W||this.y<0||this.y>H)this.reset()}
-  draw(){ctx.beginPath();ctx.arc(this.x,this.y,this.r,0,Math.PI*2);ctx.fillStyle=`rgba(${this.c},${this.a})`;ctx.fill()}
+function closeMob(){
+  hbg.classList.remove('open');
+  mNav.classList.remove('open');
+  document.body.style.overflow = '';
 }
-const N=Math.min(70,Math.floor(W*H/14000));
-for(let i=0;i<N;i++)pts.push(new Pt());
 
-let raf;
+const canvas = document.getElementById('particles');
+const ctx = canvas.getContext('2d');
+let W, H, pts = [];
+function resize(){ W = canvas.width = innerWidth; H = canvas.height = innerHeight; }
+resize();
+window.addEventListener('resize', resize, { passive: true });
+
+function Pt(){
+  this.reset = function(){
+    this.x = Math.random()*W; this.y = Math.random()*H;
+    this.r = Math.random()*1.4+.3;
+    this.vx = (Math.random()-.5)*.22; this.vy = (Math.random()-.5)*.22;
+    this.a = Math.random()*.35+.08;
+    this.c = Math.random()>.5 ? '59,130,246' : '139,92,246';
+  };
+  this.tick = function(){
+    this.x += this.vx; this.y += this.vy;
+    if(this.x<0||this.x>W||this.y<0||this.y>H) this.reset();
+  };
+  this.draw = function(){
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.r, 0, Math.PI*2);
+    ctx.fillStyle = 'rgba('+this.c+','+this.a+')';
+    ctx.fill();
+  };
+  this.reset();
+}
+
+var N = Math.min(70, Math.floor(innerWidth * innerHeight / 14000));
+for(var i=0; i<N; i++) pts.push(new Pt());
+
+var raf;
 (function loop(){
-  ctx.clearRect(0,0,W,H);
-  pts.forEach(p=>{p.tick();p.draw()});
-  for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){
-    const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.hypot(dx,dy);
-    if(d<110){ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);ctx.strokeStyle=`rgba(59,130,246,${.055*(1-d/110)})`;ctx.lineWidth=.4;ctx.s
+  ctx.clearRect(0, 0, W, H);
+  for(var i=0; i<pts.length; i++){ pts[i].tick(); pts[i].draw(); }
+  for(var i=0; i<pts.length; i++){
+    for(var j=i+1; j<pts.length; j++){
+      var dx = pts[i].x-pts[j].x, dy = pts[i].y-pts[j].y;
+      var d = Math.sqrt(dx*dx+dy*dy);
+      if(d < 110){
+        ctx.beginPath();
+        ctx.moveTo(pts[i].x, pts[i].y);
+        ctx.lineTo(pts[j].x, pts[j].y);
+        ctx.strokeStyle = 'rgba(59,130,246,'+(0.055*(1-d/110))+')';
+        ctx.lineWidth = .4;
+        ctx.stroke();
+      }
+    }
+  }
+  raf = requestAnimationFrame(loop);
+})();
+
+document.addEventListener('visibilitychange', function(){
+  if(document.hidden){ cancelAnimationFrame(raf); }
+  else {
+    (function loop(){
+      ctx.clearRect(0,0,W,H);
+      for(var i=0;i<pts.length;i++){ pts[i].tick(); pts[i].draw(); }
+      raf = requestAnimationFrame(loop);
+    })();
+  }
+});
+</script>
+</body>
+</html>
