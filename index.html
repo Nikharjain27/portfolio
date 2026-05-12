@@ -350,7 +350,7 @@ h2.sec-title{
    SKILLS
 ============================================= */
 .skills-sec{background:var(--bg)}
-.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .sk-card{
   background:var(--card);border:1px solid var(--border);
   border-radius:13px;padding:1.6rem 1.5rem;
@@ -363,6 +363,8 @@ h2.sec-title{
 .sk-c4::before{background:linear-gradient(90deg,#14b8a6,#22c55e)}
 .sk-c5::before{background:linear-gradient(90deg,#f43f5e,#f97316)}
 .sk-c6::before{background:linear-gradient(90deg,#22c55e,#3b82f6)}
+.sk-c7::before{background:linear-gradient(90deg,#f97316,#eab308)}
+.sk-c8::before{background:linear-gradient(90deg,#06b6d4,#6366f1)}
 .sk-card:hover{border-color:var(--border2);transform:translateY(-3px);box-shadow:0 12px 40px var(--shadow)}
 .sk-card:hover::before{opacity:1}
 .sk-head{display:flex;align-items:center;gap:8px;margin-bottom:1.1rem;padding-bottom:.9rem;border-bottom:1px solid var(--border)}
@@ -706,10 +708,10 @@ footer{
         Nikhar<br>
         <span class="grad">Jain</span>
       </h1>
-      <div class="hero-role reveal d1">Java Backend Developer &middot; 3 Years &middot; Mumbai</div>
+      <div class="hero-role reveal d1">Java Backend Developer &middot; 4 Years &middot; Mumbai</div>
       <p class="hero-desc reveal d2">
-        Building <strong>microservices and REST APIs</strong> for enterprise banking systems using
-        <strong>Java, Spring Boot &amp; AWS</strong>. Currently at Capgemini on the PriceLab
+        Building <strong>Microservices and REST APIs</strong> for enterprise banking systems using
+        <strong>Java, Spring Boot &amp; PostgreSQL</strong>. Currently at Capgemini on the PriceLab
         fintech platform — <strong>3 services in production.</strong>
       </p>
       <div class="hero-btns reveal d2">
@@ -727,7 +729,7 @@ footer{
         </a>
       </div>
       <div class="hero-stats reveal d3">
-        <div class="hstat"><div class="hstat-num">3+</div><div class="hstat-lbl">Years Exp.</div></div>
+        <div class="hstat"><div class="hstat-num">4</div><div class="hstat-lbl">Years Exp.</div></div>
         <div class="hstat"><div class="hstat-num">12+</div><div class="hstat-lbl">APIs Built</div></div>
         <div class="hstat"><div class="hstat-num">80%</div><div class="hstat-lbl">Test Coverage</div></div>
         <div class="hstat"><div class="hstat-num">5</div><div class="hstat-lbl">Systems Integrated</div></div>
@@ -741,8 +743,8 @@ footer{
       </div>
       <div class="hv-card">
         <div class="hv-label"><div class="hv-dot" style="background:var(--accent)"></div>Core Stack</div>
-        <div class="hv-val">Spring Boot</div>
-        <div class="hv-sub">Java · AWS · PostgreSQL</div>
+        <div class="hv-val">Java</div>
+        <div class="hv-sub">Spring Boot · Microservices · PostgreSQL</div>
       </div>
       <div class="hv-card">
         <div class="hv-label"><div class="hv-dot" style="background:var(--amber)"></div>Certifications</div>
@@ -766,13 +768,13 @@ footer{
         <div class="sec-label">About Me</div>
         <h2 class="sec-title">Backend engineer<br>who ships.</h2>
         <div class="about-text" style="margin-top:1.4rem">
-          <p>I'm a <strong>Java Backend Developer</strong> with 3 years of professional experience, currently at <strong>Capgemini Technology Services</strong> in Mumbai, building backend services for enterprise banking platforms.</p>
-          <p>I've worked across 3 microservices covering <strong>customer data management, real-time dynamic pricing, and contract lifecycle management</strong> — handling API design, database optimization, Spring Security, CI/CD, and AWS deployments.</p>
+          <p>I'm a <strong>Java Backend Developer</strong> with 4 years of professional experience, currently at <strong>Capgemini Technology Services</strong> in Mumbai, building backend services for enterprise banking platforms.</p>
+          <p>I've worked across 3 microservices covering <strong>customer data management, real-time dynamic pricing, and contract lifecycle management</strong> — handling API design, database optimization, Spring Security, CI/CD, and AWS deployments. I've also worked with <strong>Kafka, Redis, Kubernetes, and Spring Cloud</strong> within the platform, and use <strong>GitHub Copilot</strong> day-to-day.</p>
           <p>I hold two <strong>AWS certifications</strong> and completed my MCA from Acropolis Institute of Technology and Research, Indore in 2022.</p>
         </div>
       </div>
       <div class="info-cards reveal d1">
-        <div class="info-card"><div class="ic-icon">⚡</div><div class="ic-num">3+</div><div class="ic-lbl">Years of backend development</div></div>
+        <div class="info-card"><div class="ic-icon">⚡</div><div class="ic-num">4</div><div class="ic-lbl">Years of backend development</div></div>
         <div class="info-card"><div class="ic-icon">🔗</div><div class="ic-num">12+</div><div class="ic-lbl">REST API endpoints built</div></div>
         <div class="info-card"><div class="ic-icon">🛡</div><div class="ic-num">80%</div><div class="ic-lbl">Unit test coverage</div></div>
         <div class="info-card"><div class="ic-icon">🏦</div><div class="ic-num">5</div><div class="ic-lbl">Banking systems integrated</div></div>
@@ -787,7 +789,7 @@ footer{
     <div class="reveal">
       <div class="sec-label">Expertise</div>
       <h2 class="sec-title">Skills &amp; Tools</h2>
-      <p class="sec-sub">Technologies I work with daily on production systems.</p>
+      <p class="sec-sub">Technologies I work with on production systems — and some I've used enough to be useful.</p>
     </div>
     <div class="skills-grid reveal">
       <div class="sk-card sk-c1">
@@ -813,6 +815,14 @@ footer{
       <div class="sk-card sk-c6">
         <div class="sk-head"><div class="sk-dot" style="background:#22c55e"></div><div class="sk-name">Tools &amp; Testing</div></div>
         <div class="sk-tags"><span class="sk-tag">JUnit</span><span class="sk-tag">Mockito</span><span class="sk-tag">JMeter</span><span class="sk-tag">Swagger</span><span class="sk-tag">Postman</span><span class="sk-tag">Git</span><span class="sk-tag">Maven</span><span class="sk-tag">Jira</span></div>
+      </div>
+      <div class="sk-card sk-c7">
+        <div class="sk-head"><div class="sk-dot" style="background:#f97316"></div><div class="sk-name">Messaging &amp; Events</div></div>
+        <div class="sk-tags"><span class="sk-tag">Kafka</span><span class="sk-tag">Event-Driven Architecture</span><span class="sk-tag">Redis</span></div>
+      </div>
+      <div class="sk-card sk-c8">
+        <div class="sk-head"><div class="sk-dot" style="background:#06b6d4"></div><div class="sk-name">Platform &amp; AI Tools</div></div>
+        <div class="sk-tags"><span class="sk-tag">Kubernetes (K8s)</span><span class="sk-tag">Spring Cloud</span><span class="sk-tag">Eureka</span><span class="sk-tag">API Gateway</span><span class="sk-tag">Config Server</span><span class="sk-tag">GitHub Copilot</span><span class="sk-tag">System Design</span></div>
       </div>
     </div>
   </div>
@@ -850,6 +860,10 @@ footer{
           <div class="exp-item"><span class="exp-arr">→</span><span>Built a Customer Data Hub integrating 5 banking systems with validation, deduplication, and reconciliation logic.</span></div>
           <div class="exp-item"><span class="exp-arr">→</span><span>Containerized all 3 microservices with Docker; configured Jenkins CI/CD pipelines on AWS for dev, UAT, and production.</span></div>
           <div class="exp-item"><span class="exp-arr">→</span><span>Achieved 80% unit test coverage with JUnit &amp; Mockito; documented all 12 APIs in Swagger; load tested via JMeter.</span></div>
+          <div class="exp-item"><span class="exp-arr">→</span><span>Worked with <strong>Kafka</strong> for event-driven communication between microservices; familiar with async messaging patterns in distributed systems.</span></div>
+          <div class="exp-item"><span class="exp-arr">→</span><span>Used <strong>Redis</strong> as a caching layer to reduce repeated database hits on frequently accessed pricing and customer data.</span></div>
+          <div class="exp-item"><span class="exp-arr">→</span><span>Exposure to <strong>Kubernetes (K8s)</strong> for container orchestration and <strong>Spring Cloud</strong> components including Eureka, API Gateway, and Config Server in the microservices setup.</span></div>
+          <div class="exp-item"><span class="exp-arr">→</span><span>Used <strong>GitHub Copilot</strong> as a day-to-day coding assistant — helpful for boilerplate generation, test stubs, and speeding up routine backend tasks.</span></div>
         </div>
         <div class="ach-box">
           <div class="ach-lbl">Key Achievements</div>
